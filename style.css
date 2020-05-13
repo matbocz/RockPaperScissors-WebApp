@@ -1,0 +1,20 @@
+body {
+    background-color: #ffea00;
+    color: #fffcdf;
+}
+
+img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 0 0 4px red;
+}
+
+.row {
+    text-align: center;
+}
+
+.jumbotron {
+    background-color: #bfb540;
+}
