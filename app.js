@@ -6,6 +6,16 @@ const gameHands = {
     computerHand: "",
 };
 
+const playerStats = {
+    wins: 0,
+    loses: 0,
+};
+
+const computerStats = {
+    wins: 0,
+    loses: 0,
+};
+
 const playerChoice = function () {
     gameHands.playerHand = this.dataset.hand; // get player choice
     hands.forEach((hand) => (hand.style.boxShadow = "")); // remove box shadow from all imgs
