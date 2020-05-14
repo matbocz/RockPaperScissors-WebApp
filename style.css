@@ -16,6 +16,7 @@ img {
     background-color: #bfb540;
 }
 
+/* ----------Primary button---------- */
 .btn-primary,
 .btn-primary:hover,
 .btn-primary.disabled,
@@ -44,8 +45,9 @@ img {
 .show > .btn-primary.dropdown-toggle:focus {
     box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
 }
+/* ----------Primary button---------- */
 
-/* Loader */
+/* ----------Loader---------- */
 .loader {
     display: inline-block;
     border: 16px solid #fffcdf; /* Light grey */
@@ -64,3 +66,4 @@ img {
         transform: rotate(360deg);
     }
 }
+/* ----------Loader---------- */

@@ -1,5 +1,5 @@
-const hands = [...document.querySelectorAll(".left img")];
-const computerImg = document.querySelector(".right img");
+const hands = [...document.querySelectorAll(".left img")]; // get all imgs from left panel
+const computerImg = document.querySelector(".right img"); // get img from right panel
 
 const gameHands = {
     playerHand: "",
@@ -10,8 +10,8 @@ const playerChoice = function () {
     gameHands.playerHand = this.dataset.hand; // get player choice
     hands.forEach((hand) => (hand.style.boxShadow = "")); // remove box shadow from all imgs
     this.style.boxShadow = "0 0 0 4px #0015ff"; // set box shadow to chosen img
-    
-    console.log("Player: " + gameHands.playerHand);
+
+    console.log("Player: " + gameHands.playerHand); // test
 };
 
 const computerChoice = function () {
@@ -21,7 +21,7 @@ const computerChoice = function () {
     computerImg.style.display = "inline-block"; // display computer img
     document.getElementById("loader").style.display = "none"; // hide loader
 
-    console.log("Computer: " + gameHands.computerHand);
+    console.log("Computer: " + gameHands.computerHand); // test
 };
 
 function checkResult(player, computer) {
@@ -49,7 +49,7 @@ const gameStart = function () {
 
         gameEnd();
 
-        console.log(gameResult);
+        console.log(gameResult); // test
     }
 };
 };
