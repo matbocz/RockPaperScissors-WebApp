@@ -23,6 +23,20 @@ const computerChoice = function () {
     console.log("comp: " + gameHands.computerHand);
 };
 
+function checkResult(player, computer) {
+    if (player === computer) {
+        return "Draw";
+    } else if (
+        (player === "paper" && computer === "rock") ||
+        (player === "rock" && computer === "scissors") ||
+        (player === "scissors" && computer === "paper")
+    ) {
+        return "You win!";
+    } else {
+        return "You lose!";
+    }
+}
+
 const gameStart = function () {
 };
 
