@@ -57,6 +57,7 @@ const gameStart = function () {
             gameHands.computerHand
         );
 
+        publishResult(gameResult);
         gameEnd();
 
         console.log(gameResult); // test
@@ -65,6 +66,6 @@ const gameStart = function () {
 };
 
 computerImg.style.display = "none";
-hands.forEach((hand) => hand.addEventListener("click", playerChoice));
 
+hands.forEach((hand) => hand.addEventListener("click", playerChoice));
 document.getElementById("playButton").addEventListener("click", gameStart);
