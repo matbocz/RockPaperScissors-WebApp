@@ -39,6 +39,19 @@ function checkResult(player, computer) {
 }
 
 const gameStart = function () {
+    if (!gameHands.playerHand) alert("Choose your hand!");
+    else {
+        computerChoice();
+        const gameResult = checkResult(
+            gameHands.playerHand,
+            gameHands.computerHand
+        );
+
+        gameEnd();
+
+        console.log(gameResult);
+    }
+};
 };
 
 computerImg.style.display = "none";
