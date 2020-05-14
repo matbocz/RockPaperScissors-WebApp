@@ -14,6 +14,7 @@
             integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
             crossorigin="anonymous"
         />
+        <!-- Style CSS -->
         <link rel="stylesheet" href="style.css" />
 
         <title>Rock-Paper-Scissors</title>
@@ -21,7 +22,6 @@
     <body>
         <div class="jumbotron" style="text-align: center;">
             <h1 class="display-3">Rock-Paper-Scissors</h1>
-            <!-- <p class="lead">This is a simple Rock-Paper-Scissors Game.</p> -->
         </div>
         <div class="container">
             <div class="row">
@@ -50,19 +50,26 @@
                             />
                         </div>
                     </div>
-                    <h3>Wins: 3 | Loses: 4</h3>
+                    <h3>
+                        Wins: <span data-stat="playerWins">0</span> | Loses:
+                        <span data-stat="playerLoses">0</span>
+                    </h3>
                 </div>
 
                 <div class="col-sm right">
                     <h1>Computer choice</h1>
                     <div class="loader" id="loader"></div>
                     <img src="img/scissors.png" alt="Scissors" />
-                    <h3>Wins: 4 | Loses: 3</h3>
+                    <h3>
+                        Wins: <span data-stat="computerWins">0</span> | Loses:
+                        <span data-stat="computerLoses">0</span>
+                    </h3>
                 </div>
             </div>
-            <button type="button" class="btn btn-primary" id="playButton">Play!</button>
-            <h1 style="color: #ff0094;">You lose</h1>
-            <!-- <h1 style="color: #00FF6B;">You win</h1> -->
+            <button type="button" class="btn btn-primary" id="playButton">
+                Play!
+            </button>
+            <h1></h1>
         </div>
 
         <script
