@@ -91,6 +91,14 @@ const gameStart = function () {
         console.log(gameResult); // test
     }
 };
+
+const gameEnd = function () {
+    document.querySelector(
+        `[data-hand="${gameHands.playerHand}"]`
+    ).style.boxShadow = "";
+
+    gameHands.playerHand = "";
+    gameHands.computerHand = "";
 };
 
 computerImg.style.display = "none";
