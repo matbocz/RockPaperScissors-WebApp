@@ -48,6 +48,34 @@ function checkResult(player, computer) {
     }
 }
 
+const publishResult = function (result) {
+    const resultText = document.querySelector(".container h1:last-child"); // get result text
+    resultText.style.color = "#fffcdf"; // set default result text
+    resultText.textContent = result; // set result text
+
+    if (result === "You win!") {
+        resultText.style.color = "#00FF6B"; // set result text to green
+
+        ++playerStats.wins;
+        ++computerStats.loses;
+
+        document.querySelector('[data-stat="playerWins"]').textContent =
+            playerStats.wins; // set player wins text
+        document.querySelector('[data-stat="computerLoses"]').textContent =
+            computerStats.loses; // set computer loses text
+    } else if (result === "You lose!") {
+        resultText.style.color = "#ff0094"; // set result text to red
+
+        ++playerStats.loses;
+        ++computerStats.wins;
+
+        document.querySelector('[data-stat="playerLoses"]').textContent =
+            playerStats.loses; // set player loses text
+        document.querySelector('[data-stat="computerWins"]').textContent =
+            computerStats.wins; // set computer wins text
+    }
+};
+
 const gameStart = function () {
     if (!gameHands.playerHand) alert("Choose your hand!");
     else {
